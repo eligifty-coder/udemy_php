@@ -39,3 +39,5 @@ include './inc/header.inc.php';
     <li><strong>Raw Berry Cheesecake</strong> - A dairy-free cheesecake made from cashews, with a fresh berry compote.</li>
     <li><strong>Honey Lavender Panna Cotta</strong> - A creamy Italian dessert infused with organic lavender and sweetened with local honey.</li>
 </ul>
+
+<?php include './inc/footer.inc.php' ?>
