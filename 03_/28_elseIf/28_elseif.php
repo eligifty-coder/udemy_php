@@ -11,7 +11,15 @@
         <?php 
         include './vars.php';
         // $serverStatus = 'ok';
-        
+        $loyaltyPoints = 7000;
+
+        if($loyaltyPoints < 3000){
+            echo '"You have fewer than 3000 Loyalty Points. No discount is available."';
+        }elseif ($loyaltyPoints < 6000) {
+        echo '"You can spend 3000 Loyalty Points for a discount of 5%."';
+        }else{
+            echo '"You can spend 6000 Loyalty Points for a discount of 15%."';
+        }
         if($serverStatus === 'ok'){
             echo 'Welcome to our website! Browse and enjoy our content';
         }
@@ -21,7 +29,10 @@
         else{
             echo 'We\'re currently undergoing maintenance. Please check back later';
         }
+
+        
         ?>
+        
     </pre>
 </body>
 </html>     
