@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/simple.css" />
+    <link rel="stylesheet" href="../styles/custom.css" />
+    <title>Document</title>
+<body>
+    <pre>
+        <?php 
+        include './vars.php';
+        // $serverStatus = 'ok';
+        
+        if($serverStatus === 'ok'){
+            echo 'Welcome to our website! Browse and enjoy our content';
+        }
+        elseif($serverStatus == 'error'){
+            echo 'We got a serious error right now. Please call us at +1 (234) 5678';
+        }
+        else{
+            echo 'We\'re currently undergoing maintenance. Please check back later';
+        }
+        ?>
+    </pre>
+</body>
+</html>     
