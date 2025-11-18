@@ -15,11 +15,15 @@
             'sarah williams',
             'james brown',
             'jennifer davis',
-            'williams miller'
+            'williams miller',
+            'williams miller',
+            'williams miller',
         ];
-        $num = count($names);
-        $choice = rand(0, $num - 1);
-        var_dump($names[$choice]);
+        // array_unique creates a new array
+        $names = array_unique($names);
+        sort($names);
+        var_dump($names);
+
         ?>
     </pre>
 </body>
