@@ -36,8 +36,12 @@
             if($category === 'art & drawing') continue;
 
             if($category === 'self improvement') break;
-            var_dump($category) ;
+            // var_dump($category) ;
+
+            
+            
         }
+
         ?>
     </pre>
 </body>
