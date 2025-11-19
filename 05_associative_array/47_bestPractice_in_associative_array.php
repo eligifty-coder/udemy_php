@@ -22,7 +22,7 @@
         var_dump($books);
         var_dump($books['0']);
         $books['0'] = "overwritten book";
-        var_dump($books[0] );
+        var_dump([...$books]);
         /** Don't mix associative array and normal array
         
          */
