@@ -8,7 +8,7 @@
     <title>Document</title>
 <body>
     <?php include '../inc/xss.inc.php'?>
-    <pre>
+    <pre>\
         
     </pre>
 
