@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../simple.css">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    function e($value){
+        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+    }
+    $pages = [
+        'citrus_salmon' => 'Citrus Symphony Salmon',
+        'mediterranean_pasta' => 'Mediterranean Marvel Pasta',
+        'sunset_risotto' => 'Sunset Risotto',
+        'tropical_tacos' => 'Tropical Tango Tacos',
+    ];
+    ?>
+    <!-- <form action="./include.php" method='GET'>
+        <select name="page">
+            <option value="">Please select a recipe</option>
+            <option value="citrus_salmon" <?php if(!empty($_GET['page']) && $_GET['page'] ==='citrus_salmon') echo 'selected'; ?>  > Citrus Symphony Salmon</option>
+            <option value="mediterranean_pasta" <?php if(!empty($_GET['page']) && $_GET['page'] ==='mediterranean_pasta') echo 'selected'; ?>>Mediterranean Marvel Pasta</option>
+            <option value="sunset_risotto" <?php if(!empty($_GET['page']) && $_GET['page'] ==='sunset_risotto') echo 'selected'; ?> >Sunset Risotto</option>
+            <option value="tropical_tacos" <?php if(!empty($_GET['page']) && $_GET['page'] ==='tropical_tacos') echo 'selected'; ?>>Tropical Tango Tacos</option>
+        </select>
+        <input type="submit" value="Submit!">
+    </form> -->
+    <form action="./include.php" method='GET'>
+        <select name="page">
+        <option value="">Please select a recipe</option>
+            <?php foreach($pages AS $file => $page) :?>
+                <option
+                    value = "<?php echo e($file)?>"
+                    <?php if(!empty($_GET['page']) && $_GET['page'] === $file ) :?> <?php echo 'selected' ?> <?php endif; ?> > <?php echo e($page)?> </option>
+                    <?php endforeach;?>
+        </select>
+        <input type="submit" value="Submit!">
+    </form>
+
+
+    <?php
+    if(!empty($_GET['page'])){
+        $page = $_GET['page'];
+        if(!empty($pages[$page])){
+            echo file_get_contents("../pages/{$_GET['page']}.html") ;
+        }
+        // if(in_array($page, array_keys($pages))) echo file_get_contents("../pages/{$_GET['page']}.html") ;
+    }
+    ?>
+</body>
+</html>
