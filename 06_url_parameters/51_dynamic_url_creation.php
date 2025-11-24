@@ -13,7 +13,7 @@
         ?>
         <!-- <a href="51_dynamic_url_creation.php?book=Harry Potter"> Harry Potter</a>
         <a href="51_dynamic_url_creation.php?book=Beauty & the Beast"> Beauty & the Beast</a> -->
-        <a href="51_dynamic_url_creation.php?<?php echo http_build_query(['book'=> 'harry potter']);?>"> Harry Potter</a>
+        <a href="51_dynamic_url_creation.php?<?php echo http_build_query(['book'=> 'harry potter']);?>" class="gallery-item"> Harry Potter</a>
         <a href="51_dynamic_url_creation.php?<?php echo http_build_query(['book'=> 'beauty & the beast']);?>"> Harry Potter</a>
     </pre>
 </body>

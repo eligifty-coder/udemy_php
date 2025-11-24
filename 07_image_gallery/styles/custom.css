@@ -1,0 +1,27 @@
+/* Add custom rules here... */
+.gallery_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1rem;
+}
+.gallery-item{
+    display: grid;
+    width: 13rem;
+    background-color: rgb(200,200,200);
+    border: 0.125rem rgb(100,100,100);
+    border-radius:0.5rem ;
+}
+.gallery-item h3{
+    margin: 0;
+    color: #000;
+    font-size: 1rem;
+    height: 3rem;
+    padding: 0.25rem;
+}
+.gallery-item img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1920/1440; /*  this serves as the height */
+    object-fit: cover;
+}
