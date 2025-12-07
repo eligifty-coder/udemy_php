@@ -9,11 +9,12 @@
 <body>
     <pre>
         <?php
-        require_once __DIR__ . '/inc/functions.inc.php';
+        require_once __DIR__ . '/inc/function.inc.php';
         $text = 'PHP is amazing!';
+        $texts = file_get_contents(__DIR__ . '/inc/function.inc.php')
         ?>
         
     </pre>
-    <h1><?php echo e($text);?></h1>
+    <h1><?php echo e($texts);?></h1>
 </body>
 </html>
